@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="130dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="10dp"
+    android:layout_marginHorizontal="5dp"
+    android:layout_gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cat1"
+            app:shapeAppearanceOverlay="@style/catShape"
+            android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/txtMt"
+                android:layout_width="match_parent"
+                android:paddingBottom="4dp"
+                android:paddingHorizontal="4dp"
+                android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+                android:text="+5 mutual friend"
+                android:textColor="@color/white"
+                android:alpha=".8"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingHorizontal="4dp"
+                android:layout_above="@id/txtMt"
+                android:text="Marcus"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ad Friend"
+            android:textColor="@color/prim"
+            app:iconTint="@color/prim"
+            android:layout_marginVertical="5dp"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            app:iconGravity="textStart"
+            app:icon="@drawable/baseline_person_add_alt_1_24"
+            android:textAllCaps="false"/>
+
+
+    </LinearLayout>
+
+
+
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backround"
+    tools:context=".ui.home.HomeFragment">
+
+   <LinearLayout
+       android:id="@+id/LinearLayout"
+       android:layout_width="match_parent"
+       android:layout_height="?actionBarSize"
+       android:background="@color/white"
+       android:orientation="horizontal"
+       app:layout_constraintTop_toTopOf="parent">
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:gravity="center|start"
+          android:paddingHorizontal="10dp"
+          android:text="Petzy"
+          android:textAllCaps="true"
+          android:textAppearance="@style/TextAppearance.AppCompat.Large"
+          android:textColor="@color/black"
+          android:textStyle="bold" />
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:src="@drawable/baseline_shopping_cart_24" />
+
+   </LinearLayout>
+
+   <androidx.core.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_marginTop="4dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/LinearLayout"
+       android:layout_height="0dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:paddingVertical="5dp"
+             android:background="@color/white">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/storyRec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:orientation="vertical"
+             android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingVertical="10dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/white"
+                android:paddingHorizontal="10dp"
+                android:orientation="horizontal"
+
+                android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:src="@drawable/mmmm"
+                android:layout_height="40dp"/>
+               <EditText
+                   android:layout_width="match_parent"
+                   android:background="@drawable/fghghjk"
+                   android:layout_gravity="center"
+                   android:textStyle="bold"
+                   android:layout_marginStart="10dp"
+                   android:paddingHorizontal="10dp"
+                   android:paddingVertical="10dp"
+                   android:layout_height="match_parent"
+                  android:hint="What's on your mind"/>
+
+            </LinearLayout>
+
+         <com.google.android.material.divider.MaterialDivider
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+            android:layout_marginTop="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="10dp">
+
+   <com.google.android.material.button.MaterialButton
+       android:layout_width="wrap_content"
+       android:textAllCaps="false"
+       app:icon="@drawable/baseline_image_24"
+       app:iconGravity="textStart"
+       android:layout_weight="1"
+       app:iconTint="@color/prim"
+       style="@style/Widget.MaterialComponents.Button.TextButton"
+       android:layout_height="wrap_content"
+      android:text="Add photo"/>
+
+               <com.google.android.material.divider.MaterialDivider
+                   android:layout_width="2dp"
+                   android:layout_marginHorizontal="10dp"
+                   android:layout_height="match_parent"/>
+               <com.google.android.material.button.MaterialButton
+                   android:layout_width="wrap_content"
+                  android:text="Recommended"
+                   android:textAllCaps="false"
+                   android:layout_weight="1"
+                   app:iconGravity="textStart"
+                   app:iconTint="#EC4F84"
+                   app:icon="@drawable/baseline_assistant_24"
+                   style="@style/Widget.MaterialComponents.Button.TextButton"
+                   android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+         </LinearLayout>
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textColor="@color/black"
+             android:layout_marginVertical="10dp"
+             android:textStyle="bold"
+             android:layout_marginHorizontal="10dp"
+             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:text="People You may know"/>
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/friendRecy"
+             android:layout_width="match_parent"
+             tools:listitem="@layout/item_friend"
+             android:orientation="horizontal"
+             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+             android:layout_height="wrap_content"/>
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/postRecy"
+             android:layout_width="match_parent"
+             android:layout_marginTop="5dp"
+             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+             android:layout_height="wrap_content"/>
+
+      </LinearLayout>
+
+   </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
